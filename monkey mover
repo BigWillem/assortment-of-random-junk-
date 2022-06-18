@@ -1,0 +1,64 @@
+# for all paths you will need to refactor them to your personal paths, and you'll need a picture of a monkey to move (last part is VERY important!!!)
+
+from tkinter import *
+import os
+import shutil
+
+path = "C:\\Users\\me\\Pictures\\zieke_aap.gif"
+
+def click1():
+    shutil.copy(path,'C:\\Users\\me\\Desktop')
+    print("File copied")
+
+def click2():
+    try:
+        shutil.move('C:\\Users\\me\\Desktop\\zieke_aap.gif','C:\\Users\\me\\Documents\\kopie van map\\zieke_aap.gif')
+        print("File moved")
+    except FileNotFoundError:
+        print("File not found dumby")
+
+def click3():
+    try:
+        os.remove('C:\\Users\\me\\Documents\\kopie van map\\zieke_aap.gif')
+        print("File removed")
+    except FileNotFoundError:
+        print("File not found dumby")
+
+window = Tk()
+button1 = Button(window,
+                text= "click this button lol",
+                command=click1,
+                font=("papyrus", 20),
+                fg=("#00ff00"),
+                bg=('#ff00ff'),
+                activebackground=('#00ff00'),
+                activeforeground=('#ff00ff'),
+                state=ACTIVE,
+                compound='bottom')
+
+button2 = Button(window,text= "click this button afterwards lol",
+                command=click2,
+                font=("papyrus", 20),
+                fg=("#00ff00"),
+                bg=('#ff00ff'),
+                activebackground=('#00ff00'),
+                activeforeground=('#ff00ff'),
+                state=ACTIVE,
+                compound='top')
+
+button3 = Button(window,text= "click this button last lol",
+                command=click3,
+                font=("papyrus", 20),
+                fg=("#00ff00"),
+                bg=('#ff00ff'),
+                activebackground=('#00ff00'),
+                activeforeground=('#ff00ff'),
+                state=ACTIVE,
+                compound='top')
+
+
+button1.pack()
+button2.pack()
+button3.pack()
+window.mainloop()
+print(count)
