@@ -7,7 +7,7 @@ from downloader import Downloadimage
 def mongen():
 
 
-    path = "C:\\Users\\tijnf\\Pictures\\zieke_aap.gif"
+    path = "C:\\Users\\me\Pictures\\zieke_aap.gif"
 
 
 
@@ -21,7 +21,7 @@ def mongen():
 
         try:
 
-            shutil.move('C:\\Users\\tijnf\\Desktop\\coole_aap.png','C:\\Users\\tijnf\\Documents\\kopie van map\\coole_aap.png')
+            shutil.move('C:\\Users\\me\\Desktop\\coole_aap.png','C:\\Users\\me\\Documents\\kopie van map\\coole_aap.png')
 
             print("File moved")
 
@@ -35,7 +35,7 @@ def mongen():
 
         try:
 
-            os.remove('C:\\Users\\tijnf\\Documents\\kopie van map\\coole_aap.png')
+            os.remove('C:\\Users\\me\\Documents\\kopie van map\\coole_aap.png')
 
             print("File removed")
 
